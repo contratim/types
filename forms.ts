@@ -4,7 +4,7 @@ export type GenericFormData = {
 };
 
 export type PropertyKey = {
-  type: "string";
+  type: "string" | "number" | "boolean";
   title: string;
   description?: string;
   format?: string;
@@ -22,7 +22,12 @@ export type FormSchema = {
   properties: Properties;
 };
 
-export type Widget = "address" | "person" | "statecity" | "gender";
+export type Widget =
+  | "address"
+  | "person"
+  | "statecity"
+  | "gender"
+  | "same-address";
 
 export type BaseForm = {
   type: "base";

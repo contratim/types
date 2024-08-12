@@ -31,8 +31,10 @@ export type Widget =
 
 export type BaseForm = {
   type: "base";
-  /** the title must be informed to display the form step heading */
   scope?: string;
+  /** the topic must be informed to display the form topic heading and sheet */
+  topic: string;
+  /** the title must be informed to display the form step heading */
   title: string;
   description?: string;
   schema?: FormSchema;

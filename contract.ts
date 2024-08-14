@@ -7,6 +7,7 @@ export type Template = {
   docxPath: string;
   docxDocument: Document;
   forms: TemplateForms;
+  assistantId: string;
   createdAt: Timestamp;
 };
 

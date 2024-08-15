@@ -1,12 +1,5 @@
 export type { Contract, Template } from "./contract";
-export type {
-  Document,
-  Paragraph,
-  Run,
-  SimpleDocument,
-  SimpleParagraph,
-  SimpleRun,
-} from "./docx";
+export type { Document, Paragraph, Run } from "./docx";
 export type {
   BaseForm,
   FormFieldValue,

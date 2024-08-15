@@ -1,25 +1,3 @@
-export type SimpleRun = {
-  type: "run";
-  text: string;
-  styleName: string | null;
-  bold: boolean;
-};
-
-export type SimpleParagraph = {
-  type: "paragraph";
-  children: SimpleRun[];
-  styleName: string | null;
-  numbering: null | {
-    isOrdered: boolean;
-    level: string;
-  };
-};
-
-export type SimpleDocument = {
-  type: "document";
-  children: SimpleParagraph[];
-};
-
 export type Run = {
   type: "run";
   children: {
@@ -42,6 +20,7 @@ export type Run = {
 
 export type Paragraph = {
   type: "paragraph";
+  id: string;
   children: Run[];
   styleId: string | null;
   styleName: string | null;

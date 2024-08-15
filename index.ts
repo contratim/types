@@ -19,10 +19,11 @@ export type {
   TemplateForms,
   Widget,
 } from "./forms";
-export {
+export type {
   AcceptOwnershipRequest,
   AcceptOwnershipResponse,
   RunAssistantRequest,
   RunAssistantResponse,
   ErrorResponse,
 } from "./functions";
+export type { Message } from "./messages";

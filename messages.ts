@@ -2,9 +2,9 @@ import { Timestamp } from "./external";
 
 export interface Message {
   text: string;
+  role: "user" | "assistant";
   contractId: string;
+  threadId: string;
   context?: string;
-  senderUid?: string;
-  threadId?: string;
   timestamp: Timestamp;
 }

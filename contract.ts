@@ -1,6 +1,7 @@
 import { Document } from "./docx";
 import { Timestamp } from "./external";
 import { TemplateForms } from "./forms";
+import { DocumentChange } from "./ui";
 
 export type Template = {
   name: string;
@@ -14,12 +15,13 @@ export type Template = {
 export type Contract = {
   name: string;
   data: object | null;
-  template: Template | null;
-  docxDocument: Document | null;
-  documentUpdatedAt: Timestamp;
-  status: "draft" | "completed";
   ownersUids: string[];
-  accessToken: string;
+  template?: Template;
+  docxDocument?: Document;
+  documentUpdatedAt?: Timestamp;
+  changes?: DocumentChange[];
+  status?: "draft" | "completed";
+  accessToken?: string;
   createdAt: Timestamp;
-  updatedAt: Timestamp;
+  updatedAt?: Timestamp;
 };

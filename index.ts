@@ -20,3 +20,9 @@ export type {
   ErrorResponse,
 } from "./functions";
 export type { Message } from "./messages";
+export type {
+  UIParagraph,
+  DocumentChange,
+  ParagraphCreateChange,
+  ParagraphDeleteChange,
+} from "./ui";

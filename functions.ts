@@ -1,8 +1,18 @@
+export type MetaRequest = {
+  version: string | null;
+  platform?: "mobile" | "web";
+  ip?: string;
+};
+
+export interface BaseRequest {
+  meta: MetaRequest;
+}
 export interface ErrorResponse {
   error: string;
 }
 
-export interface AcceptOwnershipRequest {
+// accept ownership
+export interface AcceptOwnershipRequest extends BaseRequest {
   contractId: string;
   accessToken: string;
 }
@@ -13,17 +23,12 @@ export type AcceptOwnershipResponse =
   | AcceptOwnershipSuccessResponse
   | ErrorResponse;
 
-export type MetaRequest = {
-  version: string | null;
-  platform?: "mobile" | "web";
-  ip?: string;
-};
-export interface RunAssistantRequest {
+// run assistant
+export interface RunAssistantRequest extends BaseRequest {
   contractId: string;
   paragraphId: string;
   text: string;
   textContext?: string;
-  meta: MetaRequest;
 }
 
 export interface RunAssistantSuccessResponse {
@@ -31,3 +36,16 @@ export interface RunAssistantSuccessResponse {
 }
 
 export type RunAssistantResponse = RunAssistantSuccessResponse | ErrorResponse;
+
+// export document
+export interface ExportContractRequest extends BaseRequest {
+  contractId: string;
+}
+
+export interface ExportContractSuccessResponse {
+  path: string;
+}
+
+export type ExportContractResponse =
+  | ExportContractSuccessResponse
+  | ErrorResponse;

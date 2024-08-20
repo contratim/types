@@ -19,6 +19,8 @@ export type {
   MetaRequest,
   RunAssistantRequest,
   RunAssistantResponse,
+  ExportContractRequest,
+  ExportContractResponse,
 } from "./functions";
 export type { Message } from "./messages";
 export type {

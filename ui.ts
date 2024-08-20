@@ -1,7 +1,6 @@
 import { Paragraph } from "./docx";
 
 export interface UIParagraph {
-  id: string;
   p: Paragraph;
   prefix?: string;
   virtual?: boolean;

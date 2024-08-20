@@ -15,14 +15,15 @@ export type {
 export type {
   AcceptOwnershipRequest,
   AcceptOwnershipResponse,
+  ErrorResponse,
+  MetaRequest,
   RunAssistantRequest,
   RunAssistantResponse,
-  ErrorResponse,
 } from "./functions";
 export type { Message } from "./messages";
 export type {
-  UIParagraph,
   DocumentChange,
   ParagraphCreateChange,
   ParagraphDeleteChange,
+  UIParagraph,
 } from "./ui";

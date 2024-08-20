@@ -16,13 +16,13 @@ export type {
   AcceptOwnershipRequest,
   AcceptOwnershipResponse,
   ErrorResponse,
+  ExportContractRequest,
+  ExportContractResponse,
   MetaRequest,
   RunAssistantRequest,
   RunAssistantResponse,
-  ExportContractRequest,
-  ExportContractResponse,
 } from "./functions";
-export type { Message } from "./messages";
+export type { Message, MessageAction } from "./messages";
 export type {
   DocumentChange,
   ParagraphCreateChange,

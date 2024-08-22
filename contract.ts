@@ -21,6 +21,7 @@ export type Contract = {
   documentUpdatedAt?: Timestamp;
   changes?: DocumentChange[];
   status?: "draft" | "completed";
+  draftStage?: "forms" | "review";
   accessToken?: string;
   createdAt: Timestamp;
   updatedAt?: Timestamp;

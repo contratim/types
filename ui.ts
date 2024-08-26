@@ -9,8 +9,9 @@ export interface UIParagraph {
   deleted?: boolean;
 }
 
-export interface ParagraphCreateChange {
-  type: "paragraph-create";
+export interface ParagraphWriteChange {
+  type: "paragraph-create" | "paragraph-update";
+  messageId?: string;
   paragraph: UIParagraph;
   after: UIParagraph;
 }
@@ -20,4 +21,4 @@ export interface ParagraphDeleteChange {
   paragraph: UIParagraph;
 }
 
-export type DocumentChange = ParagraphCreateChange | ParagraphDeleteChange;
+export type DocumentChange = ParagraphWriteChange | ParagraphDeleteChange;

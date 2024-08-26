@@ -25,7 +25,7 @@ export type {
 export type { Message, MessageAction } from "./messages";
 export type {
   DocumentChange,
-  ParagraphCreateChange,
   ParagraphDeleteChange,
+  ParagraphWriteChange,
   UIParagraph,
 } from "./ui";

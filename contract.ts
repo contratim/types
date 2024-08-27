@@ -12,7 +12,11 @@ export type Template = {
   createdAt: Timestamp;
 };
 
-export type IntegerString = `${number}` & `${bigint}`;
+export type ContractStatus = "draft" | "completed";
+
+type IntegerString = `${number}` & `${bigint}`;
+
+export type ContractDraftStage = "welcome" | IntegerString | "review";
 
 export type Contract = {
   /** The name that identifies the type of contract. */
@@ -28,9 +32,9 @@ export type Contract = {
   documentUpdatedAt?: Timestamp;
   /** Array of DocumentChange objects created in review process */
   changes?: DocumentChange[];
-  status?: "draft" | "completed";
+  status?: ContractStatus;
   /** Contract drafting stage. Accepted values "welcome", "review" and any integer number as string, to represents the last forms index fulfilled  */
-  draftStage?: "welcome" | IntegerString | "review";
+  draftStage?: ContractDraftStage;
   /** Contract price charged to regular user */
   value?: number;
   /** Access token used in the contract sharing flow between users */

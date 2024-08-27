@@ -1,4 +1,9 @@
-export type { Contract, Template } from "./contract";
+export type {
+  Contract,
+  ContractDraftStage,
+  ContractStatus,
+  Template,
+} from "./contract";
 export type { Document, Paragraph, Run } from "./docx";
 export type {
   BaseForm,

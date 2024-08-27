@@ -21,6 +21,8 @@ export type {
   MetaRequest,
   RunAssistantRequest,
   RunAssistantResponse,
+  UpdateOwnersUidsRequest,
+  UpdateOwnersUidsResponse,
 } from "./functions";
 export type { Message, MessageAction } from "./messages";
 export type {

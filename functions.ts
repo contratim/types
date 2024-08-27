@@ -23,6 +23,18 @@ export type AcceptOwnershipResponse =
   | AcceptOwnershipSuccessResponse
   | ErrorResponse;
 
+//  update owners uids
+export interface UpdateOwnersUidsRequest extends BaseRequest {
+  contractId: string;
+  auid: string;
+}
+
+export interface UpdateOwnersUidsSuccessResponse {}
+
+export type UpdateOwnersUidsResponse =
+  | UpdateOwnersUidsSuccessResponse
+  | ErrorResponse;
+
 // run assistant
 export interface RunAssistantRequest extends BaseRequest {
   contractId: string;

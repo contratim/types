@@ -39,6 +39,8 @@ export type Contract = {
   value?: number;
   /** Access token used in the contract sharing flow between users */
   accessToken?: string;
+  /** Anyone with this URL can permanently access the file */
+  downloadURL?: string;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 };

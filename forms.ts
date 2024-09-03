@@ -37,7 +37,7 @@ export type BaseForm = {
   /** the title must be informed to display the form step heading */
   title: string;
   description?: string;
-  schema?: FormSchema;
+  schema: FormSchema;
   widget?: Widget;
   formData?: object;
 };

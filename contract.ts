@@ -41,6 +41,8 @@ export type Contract = {
   accessToken?: string;
   /** Anyone with this URL can permanently access the file */
   downloadURL?: string;
+  /** Current change index */
+  changeIndex?: number;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 };

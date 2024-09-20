@@ -30,7 +30,22 @@ export type {
   UpdateOwnersUidsResponse,
 } from "./functions";
 export type { Message, MessageAction } from "./messages";
-export type { PayRequest, PayResponse, PaySuccessResponse } from "./payments";
+export type {
+  PayRequest,
+  PayResponse,
+  PaySuccessResponse,
+  Payment,
+  PaymentProcessing,
+} from "./payments";
+export type {
+  AssasBillingType,
+  AssasPayment,
+  AssasPaymentCard,
+  AssasPaymentCardStatus,
+  AssasPaymentPix,
+  AssasPaymentStatus,
+  AssasPaymentStatusPix,
+} from "./payments/assas";
 export type {
   DocumentChange,
   ParagraphDeleteChange,

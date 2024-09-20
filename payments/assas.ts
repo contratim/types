@@ -1,4 +1,5 @@
-export type AssasBillingType = "CREDIT_CARD" | "PIX" | "UNDEFINED" | "BOLETO";
+// export type AssasBillingType = "CREDIT_CARD" | "PIX" | "UNDEFINED" | "BOLETO";
+export type AssasBillingType = "CREDIT_CARD" | "PIX";
 
 export type AssasPaymentCardStatus =
   | "PENDING" // Aguardando pagamento

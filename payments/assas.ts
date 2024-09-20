@@ -30,15 +30,15 @@ export type AssasPaymentStatus = AssasPaymentCardStatus | AssasPaymentStatusPix;
 
 export interface AssasPaymentCard {
   billingType: "CREDIT_CARD";
-  status: AssasPaymentCardStatus;
+  status?: AssasPaymentCardStatus;
 }
 
 export interface AssasPaymentPix {
   billingType: "PIX";
-  status: AssasPaymentStatusPix;
+  status?: AssasPaymentStatusPix;
 }
 
 export type AssasPayment = {
   gateway: "assas";
-  externalId: string;
+  externalId?: string;
 } & (AssasPaymentCard | AssasPaymentPix);

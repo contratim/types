@@ -30,6 +30,7 @@ export type {
   UpdateOwnersUidsResponse,
 } from "./functions";
 export type { Message, MessageAction } from "./messages";
+export type { PayRequest, PayResponse, PaySuccessResponse } from "./payments";
 export type {
   DocumentChange,
   ParagraphDeleteChange,

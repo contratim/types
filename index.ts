@@ -38,14 +38,14 @@ export type {
   PaymentProcessing,
 } from "./payments";
 export type {
-  AssasBillingType,
-  AssasPayment,
-  AssasPaymentCard,
-  AssasPaymentCardStatus,
-  AssasPaymentPix,
-  AssasPaymentStatus,
-  AssasPaymentStatusPix,
-} from "./payments/assas";
+  AsaasBillingType,
+  AsaasPayment,
+  AsaasPaymentCard,
+  AsaasPaymentCardStatus,
+  AsaasPaymentPix,
+  AsaasPaymentStatus,
+  AsaasPaymentStatusPix,
+} from "./payments/asaas";
 export type {
   DocumentChange,
   ParagraphDeleteChange,

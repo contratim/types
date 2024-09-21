@@ -1,6 +1,6 @@
 import { Timestamp } from "../external";
 import { BaseRequest, ErrorResponse } from "../functions";
-import { AssasBillingType, AssasPayment } from "./assas";
+import { AsaasBillingType, AsaasPayment } from "./asaas";
 
 export interface PayRequest extends BaseRequest {
   contractId: string;
@@ -11,8 +11,8 @@ export interface PaySuccessResponse {}
 
 export type PayResponse = PaySuccessResponse | ErrorResponse;
 
-export type PaymentBillingType = AssasBillingType;
-export type PaymentProcessing = AssasPayment;
+export type PaymentBillingType = AsaasBillingType;
+export type PaymentProcessing = AsaasPayment;
 
 export interface Payment {
   externalId?: string;

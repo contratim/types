@@ -9,7 +9,7 @@ export type Template = {
   docxDocument: Document;
   forms: TemplateForms;
   assistantId: string;
-  price?: number;
+  value?: number;
   createdAt: Timestamp;
 };
 

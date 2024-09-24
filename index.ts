@@ -4,6 +4,7 @@ export type {
   ContractStatus,
   Template,
 } from "./contract";
+export type { Customer } from "./customers";
 export type { Document, Paragraph, Run } from "./docx";
 export type {
   BaseForm,
@@ -46,6 +47,10 @@ export type {
   AsaasPaymentStatus,
   AsaasPaymentStatusPix,
 } from "./payments/asaas";
+export type {
+  AsaasCustomer,
+  CreateCustomerRequest,
+} from "./payments/customers";
 export type {
   DocumentChange,
   ParagraphDeleteChange,

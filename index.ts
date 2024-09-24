@@ -41,6 +41,7 @@ export type {
 } from "./payments";
 export type {
   AsaasBillingType,
+  AsaasPayment,
   AsaasPaymentStatus,
   AsaasProcessing,
   AsaasProcessingCard,

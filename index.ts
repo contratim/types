@@ -40,12 +40,12 @@ export type {
 } from "./payments";
 export type {
   AsaasBillingType,
-  AsaasPayment,
-  AsaasPaymentCard,
-  AsaasPaymentCardStatus,
-  AsaasPaymentPix,
   AsaasPaymentStatus,
-  AsaasPaymentStatusPix,
+  AsaasProcessing,
+  AsaasProcessingCard,
+  AsaasProcessingCardStatus,
+  AsaasProcessingPix,
+  AsaasProcessingPixStatus,
 } from "./payments/asaas";
 export type {
   AsaasCustomer,

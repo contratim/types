@@ -1,7 +1,7 @@
 // export type AsaasBillingType = "CREDIT_CARD" | "PIX" | "UNDEFINED" | "BOLETO";
 export type AsaasBillingType = "CREDIT_CARD" | "PIX";
 
-export type AsaasPaymentCardStatus =
+export type AsaasProcessingCardStatus =
   | "PENDING" // Aguardando pagamento
   | "CONFIRMED" // Pagamento confirmado (saldo ainda não creditado)
   | "RECEIVED" // Recebida (saldo já creditado na conta)
@@ -14,7 +14,7 @@ export type AsaasPaymentCardStatus =
   | "AWAITING_CHARGEBACK_REVERSAL" // Disputa vencida, aguardando repasse da adquirente
   | "AWAITING_RISK_ANALYSIS"; // Pagamento em análise
 
-export type AsaasPaymentStatusPix =
+export type AsaasProcessingPixStatus =
   | "AWAITING_BALANCE_VALIDATION"
   | "AWAITING_INSTANT_PAYMENT_ACCOUNT_BALANCE"
   | "AWAITING_CRITICAL_ACTION_AUTHORIZATION"
@@ -27,19 +27,21 @@ export type AsaasPaymentStatusPix =
   | "REFUSED"
   | "CANCELLED";
 
-export type AsaasPaymentStatus = AsaasPaymentCardStatus | AsaasPaymentStatusPix;
+export type AsaasPaymentStatus =
+  | AsaasProcessingCardStatus
+  | AsaasProcessingPixStatus;
 
-export interface AsaasPaymentCard {
+export interface AsaasProcessingCard {
   billingType: "CREDIT_CARD";
-  status?: AsaasPaymentCardStatus;
+  status?: AsaasProcessingCardStatus;
 }
 
-export interface AsaasPaymentPix {
+export interface AsaasProcessingPix {
   billingType: "PIX";
-  status?: AsaasPaymentStatusPix;
+  status?: AsaasProcessingPixStatus;
 }
 
-export type AsaasPayment = {
+export type AsaasProcessing = {
   gateway: "asaas";
   externalId?: string;
-} & (AsaasPaymentCard | AsaasPaymentPix);
+} & (AsaasProcessingCard | AsaasProcessingPix);

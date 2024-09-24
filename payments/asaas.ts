@@ -39,6 +39,7 @@ export interface AsaasProcessingCard {
 export interface AsaasProcessingPix {
   billingType: "PIX";
   status?: AsaasProcessingPixStatus;
+  pixQrCode?: AsaasPixQRCode;
 }
 
 export type AsaasProcessing = {
@@ -66,7 +67,6 @@ export type AsaasPayment = {
   canBePaidAfterDueDate: boolean;
   pixTransaction: null;
   pixQrCodeId: string | null;
-  pixQrCode?: AsaasPixQRCode; // contratim
   // originalValue: null;
   // interestValue: null;
   // originalDueDate: string;

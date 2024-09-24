@@ -21,6 +21,10 @@ export interface Payment {
   order: {
     contractId: string;
   };
+  customer: {
+    id: string;
+    externalId: string;
+  };
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 }

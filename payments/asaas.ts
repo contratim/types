@@ -44,6 +44,7 @@ export interface AsaasProcessingPix {
 export type AsaasProcessing = {
   gateway: "asaas";
   externalId?: string;
+  result?: AsaasPayment;
 } & (AsaasProcessingCard | AsaasProcessingPix);
 
 export type AsaasPayment = {

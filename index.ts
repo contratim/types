@@ -43,6 +43,7 @@ export type {
   AsaasBillingType,
   AsaasPayment,
   AsaasPaymentStatus,
+  AsaasPixQRCode,
   AsaasProcessing,
   AsaasProcessingCard,
   AsaasProcessingCardStatus,

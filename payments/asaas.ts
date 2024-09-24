@@ -66,6 +66,7 @@ export type AsaasPayment = {
   canBePaidAfterDueDate: boolean;
   pixTransaction: null;
   pixQrCodeId: string | null;
+  pixQrCode?: AsaasPixQRCode; // contratim
   // originalValue: null;
   // interestValue: null;
   // originalDueDate: string;
@@ -107,3 +108,10 @@ export type AsaasPayment = {
   //   reason: "ABSENCE_OF_PRINT";
   // };
 };
+
+export interface AsaasPixQRCode {
+  success: boolean;
+  encodedImage: string;
+  payload: string;
+  expirationDate: string;
+}

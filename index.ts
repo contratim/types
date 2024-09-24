@@ -36,6 +36,7 @@ export type {
   PayResponse,
   PaySuccessResponse,
   Payment,
+  PaymentBillingType,
   PaymentProcessing,
 } from "./payments";
 export type {

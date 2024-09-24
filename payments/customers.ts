@@ -1,3 +1,5 @@
+import { Timestamp } from "../external";
+
 export interface AsaasCustomer {
   object: "customer";
   id: string;
@@ -22,6 +24,8 @@ export interface AsaasCustomer {
   externalReference: string;
   notificationDisabled: false;
   observations: string;
+  // contratim
+  updatedAt?: Timestamp;
 }
 
 export interface CreateCustomerRequest {

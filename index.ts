@@ -54,6 +54,7 @@ export type {
   AsaasProcessingPix,
   AsaasProcessingPixStatus,
 } from "./payments/asaas";
+export type { Card } from "./payments/cards";
 export type {
   AsaasCustomer,
   CreateCustomerRequest,

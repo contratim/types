@@ -33,12 +33,11 @@ export type AsaasPaymentStatus =
 
 export interface AsaasProcessingCard {
   billingType: "CREDIT_CARD";
-  status?: AsaasProcessingCardStatus;
+  cardId: string;
 }
 
 export interface AsaasProcessingPix {
   billingType: "PIX";
-  status?: AsaasProcessingPixStatus;
   pixQrCode?: AsaasPixQRCode;
 }
 

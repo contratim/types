@@ -33,6 +33,9 @@ export type {
 export type { Message, MessageAction } from "./messages";
 export type {
   PayRequest,
+  PayRequestBillingCard,
+  PayRequestBillingCardToken,
+  PayRequestBillingPix,
   PayResponse,
   PaySuccessResponse,
   Payment,

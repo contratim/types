@@ -6,7 +6,6 @@ import { AsaasBillingType, AsaasProcessing } from "./asaas";
 export interface PayRequestBillingPix {
   type: "PIX";
 }
-
 export interface PayRequestBillingCard {
   type: "CREDIT_CARD";
   creditCard: {
@@ -33,13 +32,15 @@ export interface PayRequestBillingCardToken {
   cardId: string;
 }
 
+export type PaymentBilling =
+  | PayRequestBillingPix
+  | PayRequestBillingCard
+  | PayRequestBillingCardToken;
+
 export interface PayRequest extends BaseRequest {
   contractId: string;
   customer?: Customer;
-  billing:
-    | PayRequestBillingPix
-    | PayRequestBillingCard
-    | PayRequestBillingCardToken;
+  billing: PaymentBilling;
 }
 
 export interface PaySuccessResponse {}

@@ -39,6 +39,7 @@ export type {
   PayResponse,
   PaySuccessResponse,
   Payment,
+  PaymentBilling,
   PaymentBillingType,
   PaymentProcessing,
 } from "./payments";

@@ -21,9 +21,9 @@ export interface PayRequestBillingCard {
     cpfCnpj: string;
     postalCode: string;
     addressNumber: string;
-    addressComplement: string;
     phone: string;
-    mobilePhone: string;
+    addressComplement?: string;
+    mobilePhone?: string;
   };
 }
 

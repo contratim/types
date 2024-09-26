@@ -4,7 +4,7 @@ export type MessageAction = "create" | "update";
 
 export interface Message {
   role: "user" | "assistant";
-  userId: string | null;
+  userId: string;
   contractId: string;
   threadId: string;
   paragraphId: string;

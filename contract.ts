@@ -21,8 +21,10 @@ type IntegerString = `${number}` & `${bigint}`;
 export type ContractDraftStage = "welcome" | IntegerString | "review";
 
 export type Contract = {
-  /** The name that identifies the type of contract. */
+  /** The display name of the contract */
   name: string;
+  /** The slug that identifies the type of contract */
+  slug: string;
   /** Data object sent via forms */
   data: object | null;
   /** Array with IDs of users who can access the document */

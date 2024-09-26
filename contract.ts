@@ -5,6 +5,7 @@ import { DocumentChange } from "./ui";
 
 export type Template = {
   name: string;
+  slug: string;
   docxPath: string;
   docxDocument: Document;
   forms: TemplateForms;

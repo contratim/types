@@ -114,3 +114,12 @@ export interface AsaasPixQRCode {
   payload: string;
   expirationDate: string;
 }
+
+export interface AsaasListResponse<T> {
+  object: "list";
+  hasMore: boolean;
+  totalCount: number;
+  limit: number;
+  offset: number;
+  data: T[];
+}

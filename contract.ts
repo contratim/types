@@ -11,6 +11,7 @@ export type Template = {
   forms: TemplateForms;
   assistantId: string;
   value?: number;
+  summary?: string[];
   createdAt: Timestamp;
 };
 

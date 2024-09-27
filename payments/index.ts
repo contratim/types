@@ -5,9 +5,12 @@ import { AsaasBillingType, AsaasProcessing } from "./asaas";
 
 export interface PayRequestBillingPix {
   type: "PIX";
+  name: string;
+  cpfCnpj: string;
 }
 export interface PayRequestBillingCard {
   type: "CREDIT_CARD";
+  save?: boolean;
   creditCard: {
     holderName: string;
     number: string;

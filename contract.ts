@@ -37,6 +37,9 @@ export type Contract = {
   documentUpdatedAt?: Timestamp;
   /** Array of DocumentChange objects created in review process */
   changes?: DocumentChange[];
+  /** Current change index */
+  changeIndex?: number;
+  /** The contract status */
   status?: ContractStatus;
   /** Contract drafting stage. Accepted values "welcome", "review" and any integer number as string, to represents the last forms index fulfilled  */
   draftStage?: ContractDraftStage;
@@ -46,8 +49,11 @@ export type Contract = {
   accessToken?: string;
   /** Anyone with this URL can permanently access the file */
   downloadURL?: string;
-  /** Current change index */
-  changeIndex?: number;
+  /** The contract summary */
+  summary?: string[];
+  /** Assistant usage */
+  assistantUsage?: number;
+  /** Metadata of the contract */
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 };

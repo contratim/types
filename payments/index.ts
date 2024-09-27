@@ -1,4 +1,3 @@
-import { Customer } from "../customers";
 import { Timestamp } from "../external";
 import { BaseRequest, ErrorResponse } from "../functions";
 import { AsaasBillingType, AsaasProcessing } from "./asaas";
@@ -7,6 +6,17 @@ export interface PayRequestBillingPix {
   type: "PIX";
   name: string;
   cpfCnpj: string;
+}
+
+export interface CreditCardHolderInfo {
+  name: string;
+  email: string;
+  cpfCnpj: string;
+  postalCode: string;
+  addressNumber: string;
+  phone: string;
+  addressComplement?: string;
+  mobilePhone?: string;
 }
 export interface PayRequestBillingCard {
   type: "CREDIT_CARD";
@@ -18,16 +28,7 @@ export interface PayRequestBillingCard {
     expiryYear: string;
     ccv: string;
   };
-  creditCardHolderInfo: {
-    name: string;
-    email: string;
-    cpfCnpj: string;
-    postalCode: string;
-    addressNumber: string;
-    phone: string;
-    addressComplement?: string;
-    mobilePhone?: string;
-  };
+  creditCardHolderInfo: CreditCardHolderInfo;
 }
 
 export interface PayRequestBillingCardToken {
@@ -42,7 +43,6 @@ export type PaymentBilling =
 
 export interface PayRequest extends BaseRequest {
   contractId: string;
-  customer?: Customer;
   billing: PaymentBilling;
 }
 

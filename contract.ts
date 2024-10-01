@@ -33,7 +33,7 @@ export type Contract = {
   /** The contract template object */
   template?: Template;
   /** The docx object to generate the contract file */
-  docxDocument?: Document;
+  docxDocument?: Document | null;
   documentUpdatedAt?: Timestamp;
   /** Array of DocumentChange objects created in review process */
   changes?: DocumentChange[];
@@ -50,7 +50,7 @@ export type Contract = {
   /** Anyone with this URL can permanently access the file */
   downloadURL?: string;
   /** The contract summary */
-  summary?: string[];
+  summary?: string[] | null;
   /** Assistant usage */
   assistantUsage?: number;
   /** Metadata of the contract */

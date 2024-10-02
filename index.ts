@@ -44,10 +44,14 @@ export type {
   PaymentProcessing,
 } from "./payments";
 export type {
+  AsaasBaseResult,
   AsaasBillingType,
-  AsaasPayment,
+  AsaasCreditCardResult,
+  AsaasListResponse,
+  AsaasPaymentResult,
   AsaasPaymentStatus,
   AsaasPixQRCode,
+  AsaasPixResult,
   AsaasProcessing,
   AsaasProcessingCard,
   AsaasProcessingCardStatus,

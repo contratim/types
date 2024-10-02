@@ -25,6 +25,7 @@ export type FormSchema = {
 export type Widget =
   | "address"
   | "person"
+  | "company"
   | "statecity"
   | "gender"
   | "same-address";

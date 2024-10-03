@@ -15,6 +15,7 @@ export type {
   GenericFormData,
   Properties,
   PropertyKey,
+  PropertyKeyFormat,
   TemplateForms,
   Widget,
 } from "./forms";

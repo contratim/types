@@ -3,11 +3,13 @@ export type GenericFormData = {
   [key: string]: FormFieldValue;
 };
 
+export type PropertyKeyFormat = "date" | "cpf" | "cnpj" | "cep" | "email";
+
 export type PropertyKey = {
   type: "string" | "number" | "boolean";
   title: string;
   description?: string;
-  format?: string;
+  format?: PropertyKeyFormat;
   enum?: string[];
   required?: boolean;
   classNames?: string;
@@ -25,7 +27,6 @@ export type FormSchema = {
 export type Widget =
   | "address"
   | "person"
-  | "company"
   | "statecity"
   | "gender"
   | "same-address";

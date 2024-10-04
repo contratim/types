@@ -4,18 +4,18 @@ export type Run = {
     type: "text";
     value: string;
   }[];
-  styleId: string | null;
-  styleName: string | null;
-  isBold: boolean;
-  isUnderline: boolean;
-  isItalic: boolean;
-  isStrikethrough: boolean;
-  isAllCaps: boolean;
-  isSmallCaps: boolean;
+  styleId?: string | null;
+  styleName?: string | null;
+  isBold?: boolean;
+  isUnderline?: boolean;
+  isItalic?: boolean;
+  isStrikethrough?: boolean;
+  isAllCaps?: boolean;
+  isSmallCaps?: boolean;
   verticalAlignment: "baseline" | string;
-  font: string | null;
+  font?: string | null;
   fontSize: string | null;
-  highlight: string | null;
+  highlight?: string | null;
 };
 
 export type Paragraph = {
@@ -37,6 +37,26 @@ export type Paragraph = {
   };
 };
 
+export type Table = {
+  type: "table";
+  children: TableRow[];
+  styleId: string | null;
+  styleName: string | null;
+};
+
+export type TableRow = {
+  type: "tableRow";
+  children: TableCell[];
+  isHeader: boolean;
+};
+
+export type TableCell = {
+  type: "tableCell";
+  children: Paragraph[];
+  colSpan: number;
+  rowSpan: number;
+};
+
 // export type Note = {
 //   type: "note";
 //   children: {
@@ -55,7 +75,7 @@ export type Paragraph = {
 
 export type Document = {
   type: "document";
-  children: Paragraph[];
+  children: (Paragraph | Table)[];
   // notes: Note[];
   // comments: Comment[];
 };

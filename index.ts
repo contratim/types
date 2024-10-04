@@ -5,7 +5,14 @@ export type {
   Template,
 } from "./contract";
 export type { Customer } from "./customers";
-export type { Document, Paragraph, Run } from "./docx";
+export type {
+  Document,
+  Paragraph,
+  Run,
+  Table,
+  TableCell,
+  TableRow,
+} from "./docx";
 export type {
   BaseForm,
   FormFieldValue,

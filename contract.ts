@@ -1,3 +1,4 @@
+import { CTDocument } from "./doc/ct";
 import { Document } from "./docx";
 import { Timestamp } from "./external";
 import { TemplateForms } from "./forms";
@@ -34,6 +35,7 @@ export type Contract = {
   template?: Template;
   /** The docx object to generate the contract file */
   docxDocument?: Document | null;
+  ctDocument?: CTDocument | null;
   documentUpdatedAt?: Timestamp;
   /** Array of DocumentChange objects created in review process */
   changes?: DocumentChange[];

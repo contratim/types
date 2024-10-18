@@ -77,3 +77,11 @@ export type {
   ParagraphWriteChange,
   UIParagraph,
 } from "./ui";
+
+export type {
+  CTDocument,
+  CTDocumentChild,
+  CTParagraph,
+  CTParagraphType,
+  CTTable,
+} from "./doc/ct";

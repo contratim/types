@@ -11,6 +11,7 @@ export type CTParagraphType = "clause" | "forum";
 export type CTParagraph = {
   type: "paragraph";
   paragraph: Paragraph;
+  id: string;
   paragraphType?: CTParagraphType;
   numbering?: {
     level: number;

@@ -1,24 +1,22 @@
-import { Paragraph } from "./docx";
+import { CTParagraph } from "./doc/ct";
 
-export interface UIParagraph {
-  p: Paragraph;
+export type UICTParagraph = CTParagraph & {
   prefix?: string;
-  virtual?: boolean;
-  siblings?: boolean;
   editable?: boolean;
   deleted?: boolean;
-}
+  virtual?: boolean;
+};
 
 export interface ParagraphWriteChange {
   type: "paragraph-create" | "paragraph-update";
   messageId?: string;
-  paragraph: UIParagraph;
-  after: UIParagraph;
+  paragraph: UICTParagraph;
+  after: UICTParagraph;
 }
 
 export interface ParagraphDeleteChange {
   type: "paragraph-delete";
-  paragraph: UIParagraph;
+  paragraph: UICTParagraph;
 }
 
 export type DocumentChange = ParagraphWriteChange | ParagraphDeleteChange;

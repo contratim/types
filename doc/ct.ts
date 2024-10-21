@@ -13,6 +13,7 @@ export type CTParagraph = {
   paragraph: Paragraph;
   id: string;
   paragraphType?: CTParagraphType;
+  descendantOf?: CTParagraphType;
   numbering?: {
     level: number;
     ordered: boolean;

@@ -75,7 +75,7 @@ export type {
   DocumentChange,
   ParagraphDeleteChange,
   ParagraphWriteChange,
-  UIParagraph,
+  UICTParagraph,
 } from "./ui";
 
 export type {

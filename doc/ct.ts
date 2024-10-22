@@ -6,7 +6,7 @@ export type CTDocument = {
   children: CTDocumentChild[];
 };
 
-export type CTParagraphType = "clause" | "forum";
+export type CTParagraphType = "clause" | "forum" | "part";
 
 export type CTParagraph = {
   type: "paragraph";

@@ -1,5 +1,4 @@
 import { CTDocument } from "./doc/ct";
-import { Document } from "./docx";
 import { Timestamp } from "./external";
 import { TemplateForms } from "./forms";
 import { DocumentChange } from "./ui";
@@ -8,7 +7,7 @@ export type Template = {
   name: string;
   slug: string;
   docxPath: string;
-  docxDocument: Document;
+  ctDocument: CTDocument;
   forms: TemplateForms;
   assistantId: string;
   value?: number;
@@ -34,7 +33,6 @@ export type Contract = {
   /** The contract template object */
   template?: Template;
   /** The docx object to generate the contract file */
-  docxDocument?: Document | null;
   ctDocument?: CTDocument | null;
   documentUpdatedAt?: Timestamp;
   /** Array of DocumentChange objects created in review process */

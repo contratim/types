@@ -29,7 +29,8 @@ export type Widget =
   | "person"
   | "statecity"
   | "gender"
-  | "same-address";
+  | "same-address"
+  | "text-editor";
 
 export type BaseForm = {
   type: "base";
